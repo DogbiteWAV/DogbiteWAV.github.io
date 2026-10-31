@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dogbite.wav Portfolio</title>
+<meta name="description" content="Mixing, mastering and production for bands. Selected releases, rates and booking for dogbite.wav.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root {
+  --ground: #0E0E0E;
+  --panel: #161615;
+  --ink: #F2EEE6;
+  --muted: #A8A39A;
+  --rule: #34322E;
+  --signal: #5AA9FF;
+  --signal-ink: #0B1622;
+  --display: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-block: 40px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+a { color: var(--ink); }
+a:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+.label { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--signal); }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; flex-wrap: wrap; }
+.topbar span:last-child { color: var(--muted); font-weight: 400; }
+.hero { display: flex; flex-direction: column; gap: 22px; }
+.hero h1 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(64px, 14vw, 148px); line-height: 0.9; text-transform: uppercase; text-wrap: balance; }
+.hero p.lede { margin: 0; max-width: 56ch; font-size: 16px; color: var(--muted); }
+.hero p.lede strong { color: var(--ink); font-weight: 600; }
+#wave { display: block; width: 100%; height: 72px; max-width: 100%; }
+.section { display: flex; flex-direction: column; gap: 20px; }
+.section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.section-head h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(36px, 6vw, 56px); line-height: 1; text-transform: uppercase; }
+.key { font-size: 12px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+.key span { display: inline-flex; align-items: center; gap: 8px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.dot.on { background: var(--signal); }
+.dot.off { border: 1.5px solid var(--rule); }
+.tracks { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--rule); }
+.track { display: flex; flex-direction: column; gap: 18px; padding-block: 28px; border-bottom: 2px solid var(--rule); }
+.meta { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.meta .when { font-size: 12px; letter-spacing: 0.12em; color: var(--muted); font-variant-numeric: tabular-nums; }
+.meta h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(30px, 5vw, 44px); line-height: 1.02; text-transform: uppercase; text-wrap: balance; }
+.meta .artist { font-size: 15px; }
+.roles { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.role { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; border: 1.5px solid var(--rule); color: var(--muted); }
+.role.on { background: var(--signal); border-color: var(--signal); color: var(--signal-ink); }
+.player { display: block; width: 100%; max-width: 100%; height: 152px; border: 0; border-radius: 12px; background: var(--panel); }
+.rates { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.rate { background: var(--panel); padding: 22px 22px 20px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.rate .price { font-family: var(--display); font-size: 40px; line-height: 1; color: var(--signal); font-variant-numeric: tabular-nums; }
+.rate .what { font-size: 14px; }
+.rate .note { font-size: 12px; color: var(--muted); }
+.fine { margin: 0; font-size: 13px; color: var(--muted); max-width: 64ch; }
+.book { border-top: 2px solid var(--rule); padding-top: 40px; display: flex; flex-direction: column; gap: 18px; }
+.book h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(56px, 11vw, 112px); line-height: 0.9; text-transform: uppercase; }
+.book p { margin: 0; font-size: 17px; max-width: 52ch; }
+.handle { color: var(--signal); font-weight: 600; text-decoration: none; }
+.handle:hover { text-decoration: underline; }
+.pay { font-size: 12px; letter-spacing: 0.12em; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <span>DOGBITE.WAV</span>
+    <span>Mixing · Mastering · Production</span>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="label">Selected work</p>
+    <h1 id="hero-title">Records I've helped make</h1>
+    <canvas id="wave" aria-hidden="true"></canvas>
+    <p class="lede">I mix and master for local bands, and track and produce select projects. <strong>Hit play on any release below.</strong></p>
+  </section>
+
+  <section class="section" aria-labelledby="credits-title">
+    <div class="section-head">
+      <h2 id="credits-title">Credits</h2>
+      <div class="key" aria-hidden="true">
+        <span><i class="dot on"></i>My role</span>
+        <span><i class="dot off"></i>Not on this one</span>
+      </div>
+    </div>
+    <ol class="tracks">
+      <li class="track">
+        <div class="meta">
+          <span class="when">AUG 2026</span>
+          <h3>That Day I Knew</h3>
+          <span class="artist">Gene Ross</span>
+          <div class="roles" aria-label="Roles: tracked, produced">
+            <span class="role on">Tracked</span><span class="role on">Produced</span><span class="role">Mixed</span><span class="role">Mastered</span>
+          </div>
+        </div>
+        <iframe class="player" title="That Day I Knew by Gene Ross on Spotify" src="https://open.spotify.com/embed/track/2iKk26vs1Gu1v9vC9McYId?theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </li>
+      <li class="track">
+        <div class="meta">
+          <span class="when">JUN 2026</span>
+          <h3>If I Die Tonight</h3>
+          <span class="artist">Gene Ross</span>
+          <div class="roles" aria-label="Roles: tracked, produced">
+            <span class="role on">Tracked</span><span class="role on">Produced</span><span class="role">Mixed</span><span class="role">Mastered</span>
+          </div>
+        </div>
+        <iframe class="player" title="If I Die Tonight by Gene Ross on Spotify" src="https://open.spotify.com/embed/track/1YthsuYBQ91seRNSkP1UJD?theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </li>
+      <li class="track">
+        <div class="meta">
+          <span class="when">FEB 2026</span>
+          <h3>I Fear</h3>
+          <span class="artist">Somebody Else, Fifteen Rhema</span>
+          <div class="roles" aria-label="Roles: tracked, produced, mixed">
+            <span class="role on">Tracked</span><span class="role on">Produced</span><span class="role on">Mixed</span><span class="role">Mastered</span>
+          </div>
+        </div>
+        <iframe class="player" title="I Fear by Somebody Else on Spotify" src="https://open.spotify.com/embed/track/7JBbu2OFnbbOEbfrdN4HZM?theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </li>
+      <li class="track">
+        <div class="meta">
+          <span class="when">FEB 2025</span>
+          <h3>Last Ditch Effort</h3>
+          <span class="artist">Sidefect</span>
+          <div class="roles" aria-label="Roles: tracked, produced, mixed, mastered">
+            <span class="role on">Tracked</span><span class="role on">Produced</span><span class="role on">Mixed</span><span class="role on">Mastered</span>
+          </div>
+        </div>
+        <iframe class="player" title="Last Ditch Effort by Sidefect on Spotify" src="https://open.spotify.com/embed/track/3uj6khpdOSa38bSyE6Kot8?theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section" aria-labelledby="rates-title">
+    <div class="section-head">
+      <h2 id="rates-title">Rates</h2>
+    </div>
+    <div class="rates">
+      <div class="rate"><span class="price">$300</span><span class="what">Mix, per song</span><span class="note">3 revisions · main, instrumental &amp; stems · 2 weeks</span></div>
+      <div class="rate"><span class="price">$60</span><span class="what">Master, per song</span><span class="note">Any mix, mine or someone else's</span></div>
+      <div class="rate"><span class="price">10–15%</span><span class="what">Off EPs &amp; albums</span><span class="note">EP 4–6 songs 10% · Album 8+ songs 15%</span></div>
+    </div>
+    <p class="fine">Editing, extra revisions and rush delivery are available as add-ons. Production and tracking are offered for select projects.</p>
+  </section>
+
+  <section class="book" aria-labelledby="book-title">
+    <h2 id="book-title">Ready to book?</h2>
+    <p>DM <a class="handle" href="https://instagram.com/dogbite.wav" target="_blank" rel="noopener">@dogbite.wav</a> on Instagram with your project, song count and a rough demo.</p>
+    <span class="pay">50% DEPOSIT TO BOOK · VENMO · CASH APP · PAYPAL</span>
+  </section>
+</div>
+
+<script>
+(function () {
+  var c = document.getElementById('wave');
+  if (!c || !c.getContext) return;
+  var heights = [0.25,0.45,0.7,0.38,0.82,0.95,0.56,0.32,0.75,1,0.62,0.44,0.88,0.5,0.25,0.38,0.7,0.95,0.82,0.56,0.38,0.2,0.5,0.75,0.88,0.62,0.44,0.7,0.95,0.56,0.32,0.44,0.75,0.5,0.25,0.38];
+  function draw() {
+    var dpr = window.devicePixelRatio || 1;
+    var w = c.clientWidth, h = c.clientHeight;
+    if (!w) return;
+    c.width = Math.round(w * dpr); c.height = Math.round(h * dpr);
+    var ctx = c.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--signal').trim() || '#5AA9FF';
+    var n = Math.max(12, Math.floor(w / 18));
+    var step = w / n, bw = Math.max(4, step * 0.45);
+    for (var i = 0; i < n; i++) {
+      var bh = Math.max(4, heights[i % heights.length] * h);
+      ctx.fillRect(i * step, (h - bh) / 2, bw, bh);
+    }
+  }
+  draw();
+  window.addEventListener('resize', draw);
+})();
+</script>
+</body>
+</html>
